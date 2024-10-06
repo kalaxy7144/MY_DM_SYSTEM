@@ -102,7 +102,6 @@ export default function SignUp({ setView }) {
       <div className="flex items-center gap-2">
       <img
         src={"/images/jstagram.png"}
-        alt="아이콘"
         style={{ width: '110px', height: '110px' }}
         className="mb-6 justify-center items-center"
       />
