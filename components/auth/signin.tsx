@@ -43,7 +43,7 @@ export default function SignIn({ setView }) {
       <div className="pt-10 pb-6 px-10 w-full flex flex-col items-center justify-center max-w-lg border border-gray-400 bg-white gap-2">
       <div className="flex items-center gap-2">
       <img
-        src={"/images/jstagram.png"}
+        src={"/images/J_stagram.png"}
         style={{ width: '110px', height: '110px' }}
         className="mb-6 justify-center items-center"
       />
