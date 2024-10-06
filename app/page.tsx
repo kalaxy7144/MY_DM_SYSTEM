@@ -2,7 +2,7 @@ import LogoutButton from "components/logout-button";
 import { createServerSupabaseClient } from "utils/supabase/server";
 
 export const metadata = {
-  title: "J.stagram",
+  title: "정원이의 STAGRAM",
   description: "Jeong won's individual DM System",
 };
 
