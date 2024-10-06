@@ -38,11 +38,18 @@ export default function SignIn({ setView }) {
       }
     },
   });
-
   return (
     <div className="flex flex-col gap-4">
       <div className="pt-10 pb-6 px-10 w-full flex flex-col items-center justify-center max-w-lg border border-gray-400 bg-white gap-2">
-        <img src={"/images/inflearngram.png"} className="w-60 mb-6" />
+      <div className="flex items-center gap-2">
+      <img
+        src={"/images/j.stagram.png"}
+        alt="아이콘"
+        style={{ width: '110px', height: '110px' }}
+        className="mb-6 justify-center items-center"
+      />
+        <img src={"/images/stagram_font.png"} className="w-60 mb-6" />
+      </div>
         <Input
           value={email}
           onChange={(e) => setEmail(e.target.value)}

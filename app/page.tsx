@@ -2,8 +2,8 @@ import LogoutButton from "components/logout-button";
 import { createServerSupabaseClient } from "utils/supabase/server";
 
 export const metadata = {
-  title: "Inflearngram",
-  description: "Instagram clone project",
+  title: "J.stagram",
+  description: "Jeong won's individual DM System",
 };
 
 export default async function Home() {
