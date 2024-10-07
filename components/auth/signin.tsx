@@ -19,8 +19,13 @@ export default function SignIn({ setView }) {
           : "http://localhost:3000/auth/callback",
       },
     });
-    console.log(data);
+    if (error) {
+      console.error("Kakao Login Error: ", error.message);
+    } else {
+      console.log(data);
+    }
   };
+  
 
   const signInMutation = useMutation({
     mutationFn: async () => {
