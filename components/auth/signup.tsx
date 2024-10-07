@@ -116,7 +116,7 @@ export default function SignUp({ setView }) {
               name="otp"
               type="text"
               className="w-full rounded-sm"
-              placeholder="6자리 OTP를 입력해주세요."
+              placeholder="6자리 OTP를 입력해주세요!"
             />
             <span className="text-red-700">{formik.errors.otp}</span>
           </>
