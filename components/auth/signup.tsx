@@ -47,20 +47,25 @@ export default function SignUp({ setView }) {
   });
 
   const signInWithKakao = async () => {
+    const redirectTo =
+      process.env.NEXT_PUBLIC_VERCEL_URL
+        ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/callback`
+        : "http://localhost:3000/auth/callback";  // 로컬 환경에서 테스트 시
+  
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "kakao",
       options: {
-        redirectTo: process.env.NEXT_PUBLIC_VERCEL_URL
-          ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/callback`
-          : "http://localhost:3000/auth/callback",
+        redirectTo: redirectTo,  // 환경에 따른 리다이렉트 URL 설정
       },
     });
+  
     if (error) {
       console.error("Kakao Login Error: ", error.message);
     } else {
-      console.log(data);
+      console.log(data);  // 로그인 성공 시 데이터를 확인합니다.
     }
   };
+  
   
 
   const signupMutation = useMutation({
