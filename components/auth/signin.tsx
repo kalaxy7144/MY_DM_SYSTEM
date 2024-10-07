@@ -10,7 +10,7 @@ export default function SignIn({ setView }) {
   const [password, setPassword] = useState("");
   const supabase = createBrowserSupabaseClient();
 
-  /* const signInWithKakao = async () => {
+  const signInWithKakao = async () => {
     const redirectTo =
       process.env.NEXT_PUBLIC_VERCEL_URL
         ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/callback`
@@ -28,24 +28,8 @@ export default function SignIn({ setView }) {
     } else {
       console.log(data);  // 로그인 성공 시 데이터를 확인합니다.
     }
-  }; */
-  const signInWithKakao = async () => {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "kakao",
-      options: {
-        redirectTo: `https://j-stagram.vercel.app/auth/callback`,  // Vercel에 배포된 URL로 리다이렉트
-      },
-    });
-  
-    if (error) {
-      console.error("Kakao Login Error: ", error.message);
-    } else {
-      console.log(data);  // 로그인 성공 시 데이터를 확인합니다.
-    }
   };
   
-  
-
   const signInMutation = useMutation({
     mutationFn: async () => {
       const { data, error } = await supabase.auth.signInWithPassword({
